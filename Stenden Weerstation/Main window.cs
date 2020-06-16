@@ -278,12 +278,8 @@ namespace Stenden_Weerstation
                 var reader = cmd.ExecuteReader();
                 using (reader)
                 {
-                    var nummer = 0;
                     while (reader.Read())
                     {
-                        
-                        nummer++;
-                        Console.WriteLine(nummer);
                         chart1.Series["GemTemp"].Points.AddXY(reader.GetValue(2), reader.GetValue(1));
                     }
                 }
@@ -333,6 +329,7 @@ namespace Stenden_Weerstation
             }
             catch
             {
+                Console.WriteLine("Did you turn on the WebAPICOntroller?");
                 Opties_Error.Text = "De plaats bestaat niet of er is geen internet";
             }
         }
