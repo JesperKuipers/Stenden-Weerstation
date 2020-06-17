@@ -300,10 +300,11 @@ namespace Stenden_Weerstation
         {
             try
             {
-                var webService = new ServiceReference1.WebService1SoapClient();
-                var json = webService.WebAPIController(GetPlaats());
-                ConvertWeather convertWeather = JsonConvert.DeserializeObject<ConvertWeather>(json);
-
+                var webService = new ServiceReference1.WebService1SoapClient().WebAPIController(GetPlaats());
+               
+                //var json = webService.WebAPIController(GetPlaats(), yeet);
+                ConvertWeather convertWeather = JsonConvert.DeserializeObject<ConvertWeather>(webService);
+                
                 temperature = (int)convertWeather.main.temp;
                 if (IsCelsius())
                     temperature = temperature - 273.15;

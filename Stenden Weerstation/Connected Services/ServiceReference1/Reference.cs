@@ -49,11 +49,15 @@ namespace Stenden_Weerstation.ServiceReference1 {
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
         public string city;
         
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string apiKey;
+        
         public WebAPIControllerRequestBody() {
         }
         
-        public WebAPIControllerRequestBody(string city) {
+        public WebAPIControllerRequestBody(string city, string apiKey) {
             this.city = city;
+            this.apiKey = apiKey;
         }
     }
     
@@ -136,10 +140,11 @@ namespace Stenden_Weerstation.ServiceReference1 {
             return base.Channel.WebAPIControllerAsync(request);
         }
         
-        public System.Threading.Tasks.Task<Stenden_Weerstation.ServiceReference1.WebAPIControllerResponse> WebAPIControllerAsync(string city) {
+        public System.Threading.Tasks.Task<Stenden_Weerstation.ServiceReference1.WebAPIControllerResponse> WebAPIControllerAsync(string city, string apiKey) {
             Stenden_Weerstation.ServiceReference1.WebAPIControllerRequest inValue = new Stenden_Weerstation.ServiceReference1.WebAPIControllerRequest();
             inValue.Body = new Stenden_Weerstation.ServiceReference1.WebAPIControllerRequestBody();
             inValue.Body.city = city;
+            inValue.Body.apiKey = apiKey;
             return ((Stenden_Weerstation.ServiceReference1.WebService1Soap)(this)).WebAPIControllerAsync(inValue);
         }
     }

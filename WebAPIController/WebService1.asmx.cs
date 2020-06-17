@@ -20,9 +20,9 @@ namespace WebAPIController
     {
 
         [WebMethod]
-        public string WebAPIController(String city)
+        public string WebAPIController(string city)
         {
-            String apiKey = "27bf6642efbefd65554878dd14629345";
+            var apiKey = APIKey.GetAPIKey();
 
             var url = String.Format("https://api.openweathermap.org/data/2.5/weather?q={0}&appid={1}", city, apiKey);
 
@@ -31,6 +31,7 @@ namespace WebAPIController
 
             try
             {
+                Console.WriteLine("yeet");
                 using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
                 using (Stream stream = response.GetResponseStream())
                 using (StreamReader reader = new StreamReader(stream))
@@ -38,8 +39,9 @@ namespace WebAPIController
                     return reader.ReadToEnd();
                 }
             }
-            catch
+            catch (Exception e)
             {
+                Console.WriteLine(e.Message);
                 return "";
             }
         }
