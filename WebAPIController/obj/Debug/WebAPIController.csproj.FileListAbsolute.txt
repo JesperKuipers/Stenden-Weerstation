@@ -52,8 +52,8 @@ C:\Users\jespe\source\repos\Stenden Weerstation\WebAPIController\bin\roslyn\VBCS
 C:\Users\jespe\source\repos\Stenden Weerstation\WebAPIController\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\jespe\source\repos\Stenden Weerstation\WebAPIController\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\jespe\source\repos\Stenden Weerstation\WebAPIController\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\jespe\source\repos\Stenden Weerstation\WebAPIController\obj\Debug\WebAPIController.csprojAssemblyReference.cache
 C:\Users\jespe\source\repos\Stenden Weerstation\WebAPIController\obj\Debug\WebAPIController.csproj.CoreCompileInputs.cache
 C:\Users\jespe\source\repos\Stenden Weerstation\WebAPIController\obj\Debug\WebAPIController.csproj.CopyComplete
 C:\Users\jespe\source\repos\Stenden Weerstation\WebAPIController\obj\Debug\WebAPIController.dll
 C:\Users\jespe\source\repos\Stenden Weerstation\WebAPIController\obj\Debug\WebAPIController.pdb
+C:\Users\jespe\source\repos\Stenden Weerstation\WebAPIController\obj\Debug\WebAPIController.csprojAssemblyReference.cache

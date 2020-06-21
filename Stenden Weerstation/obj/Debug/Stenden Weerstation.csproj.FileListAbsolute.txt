@@ -3,6 +3,7 @@ C:\Users\jespe\source\repos\Stenden Weerstation\Stenden Weerstation\bin\Debug\St
 C:\Users\jespe\source\repos\Stenden Weerstation\Stenden Weerstation\bin\Debug\Stenden Weerstation.pdb
 C:\Users\jespe\source\repos\Stenden Weerstation\Stenden Weerstation\bin\Debug\Newtonsoft.Json.dll
 C:\Users\jespe\source\repos\Stenden Weerstation\Stenden Weerstation\bin\Debug\Newtonsoft.Json.xml
+C:\Users\jespe\source\repos\Stenden Weerstation\Stenden Weerstation\obj\Debug\Stenden Weerstation.csprojAssemblyReference.cache
 C:\Users\jespe\source\repos\Stenden Weerstation\Stenden Weerstation\obj\Debug\Stenden_Weerstation.AboutBox.resources
 C:\Users\jespe\source\repos\Stenden Weerstation\Stenden Weerstation\obj\Debug\Stenden_Weerstation.MainWindow.resources
 C:\Users\jespe\source\repos\Stenden Weerstation\Stenden Weerstation\obj\Debug\Stenden_Weerstation.Properties.Resources.resources
@@ -12,4 +13,3 @@ C:\Users\jespe\source\repos\Stenden Weerstation\Stenden Weerstation\obj\Debug\St
 C:\Users\jespe\source\repos\Stenden Weerstation\Stenden Weerstation\obj\Debug\Stenden Weerstation.csproj.CopyComplete
 C:\Users\jespe\source\repos\Stenden Weerstation\Stenden Weerstation\obj\Debug\Stenden Weerstation.exe
 C:\Users\jespe\source\repos\Stenden Weerstation\Stenden Weerstation\obj\Debug\Stenden Weerstation.pdb
-C:\Users\jespe\source\repos\Stenden Weerstation\Stenden Weerstation\obj\Debug\Stenden Weerstation.csprojAssemblyReference.cache

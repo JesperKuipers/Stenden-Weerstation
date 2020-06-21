@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.30128.74
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stenden Weerstation", "Stenden Weerstation\Stenden Weerstation.csproj", "{47E771CC-05D4-4187-A39A-236F5BA25A25}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4ED07ADC-D026-4EAF-8914-EC4C9401BC1B} = {4ED07ADC-D026-4EAF-8914-EC4C9401BC1B}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPIController", "WebAPIController\WebAPIController.csproj", "{4ED07ADC-D026-4EAF-8914-EC4C9401BC1B}"
 EndProject

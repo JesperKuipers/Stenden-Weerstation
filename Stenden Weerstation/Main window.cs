@@ -280,7 +280,13 @@ namespace Stenden_Weerstation
                 {
                     while (reader.Read())
                     {
-                        chart1.Series["GemTemp"].Points.AddXY(reader.GetValue(2), reader.GetValue(1));
+                        Console.WriteLine(String.Format("city: {0} | city from DB: {1}", city, reader.GetValue(3)));
+                        if (city == reader.GetValue(3).ToString())
+                        {
+                            Console.WriteLine("City is same as the current one.");
+                            Console.WriteLine("");
+                            chart1.Series["GemTemp"].Points.AddXY(reader.GetValue(2), reader.GetValue(1));
+                        }
                     }
                 }
                 reader.Close();
@@ -301,10 +307,10 @@ namespace Stenden_Weerstation
             try
             {
                 var webService = new ServiceReference1.WebService1SoapClient().WebAPIController(GetPlaats());
-               
+
                 //var json = webService.WebAPIController(GetPlaats(), yeet);
                 ConvertWeather convertWeather = JsonConvert.DeserializeObject<ConvertWeather>(webService);
-                
+
                 temperature = (int)convertWeather.main.temp;
                 if (IsCelsius())
                     temperature = temperature - 273.15;
@@ -324,7 +330,7 @@ namespace Stenden_Weerstation
                 city = convertWeather.name;
 
                 UpdateWeatherLabels();
-                SetWheaterInDB(temperature);
+                SetWheaterInDB(temperature, city);
                 RemoveOldWheaterInDB();
                 LoadChart();
             }
@@ -335,7 +341,7 @@ namespace Stenden_Weerstation
             }
         }
 
-        public void SetWheaterInDB(double temp)
+        public void SetWheaterInDB(double temp, string city)
         {
 
             try
@@ -343,9 +349,10 @@ namespace Stenden_Weerstation
                 var connection = ConnectDatabase();
 
                 var cmd = connection.CreateCommand();
-                cmd.CommandText = "insert into APIData (temperature, date) values (@param1, @param2)";
+                cmd.CommandText = "insert into APIData (temperature, date, city) values (@param1, @param2, @param3)";
                 cmd.Parameters.AddWithValue("@param1", SqlDbType.Float).Value = temp;
                 cmd.Parameters.AddWithValue("@param2", SqlDbType.DateTime).Value = DateTime.Now;
+                cmd.Parameters.AddWithValue("@param3", SqlDbType.NVarChar).Value = city;
 
                 connection.Open();
 
